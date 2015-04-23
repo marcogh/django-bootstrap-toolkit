@@ -6,7 +6,9 @@ from django.utils.html import conditional_escape
 from django.contrib.staticfiles import finders
 
 
-default_date_format = getattr(settings, 'DATE_INPUT_FORMATS', None)
+#default_date_format = getattr(settings, 'DATE_INPUT_FORMATS', None)
+default_date_format = formats.get_format('DATE_INPUT_FORMATS',
+                                         lang=translation.get_language())
 if default_date_format:
     default_date_format = str(default_date_format[0])
 
