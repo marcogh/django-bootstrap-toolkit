@@ -1,6 +1,6 @@
 from django import forms
 from django.conf import settings
-from django.utils import translation
+from django.utils import formats, translation
 from django.utils.safestring import mark_safe
 from django.utils.html import conditional_escape
 from django.contrib.staticfiles import finders
